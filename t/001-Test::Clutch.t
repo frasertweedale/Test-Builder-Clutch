@@ -5,7 +5,7 @@ use Test::More;
 use Test::Builder;
 use Test::Clutch;
 
-plan tests => 11;
+plan tests => 14;
 
 ok(1, 'ok() works');
 
@@ -18,6 +18,16 @@ subtest 'subtest works' => sub {
 	plan tests => 2;
 	pass;
 	pass;
+};
+
+subtest 'failure in subtest disengaged' => sub {
+	plan tests => 3;
+	ok 1, 'abject pass';
+	Test::Clutch->disengage;
+	my $ok = ok undef;
+	Test::Clutch->engage;
+	ok !$ok, 'ok() returned false while clutch disengaged';
+	ok 1, 'abject pass';
 };
 
 TODO: {
@@ -52,7 +62,14 @@ Test::Clutch->disengage;
 fail 'clutch is disengaged'; # DO NOT COUNT THIS TEST
 Test::Clutch->engage;
 pass 'clutch is engaged';
-ok(!Test::Builder->new->is_passing, 'test is no longer passing');
+ok(Test::Builder->new->is_passing,
+   'test reports as passing when clutch engaged');
+ok(Test::Builder->new->failed_while_disengaged,
+	'failure while disengaged was recorded');
+Test::Clutch->disengage;
+my $ok = Test::Builder->new->is_passing;
+Test::Clutch->engage;
+ok !$ok, 'test reports as not passing when clutch disengaged';
 
 
 my $Test = Test::Builder->new;

@@ -66,6 +66,9 @@ undefined, test output must remain enabled by default.
 
 =cut
 
+$meta->add_attribute('failed_while_disengaged' => (
+		accessor => 'failed_while_disengaged'
+));
 $meta->add_attribute('disengaged' => (accessor => 'disengaged'));
 $meta->add_method('disengage', sub { shift->disengaged(1) });
 $meta->add_method('engage', sub { shift->disengaged(undef) });
@@ -105,7 +108,7 @@ $meta->add_around_method_modifier('ok', sub {
 	my $self = shift;
 
 	if ($self->disengaged) {
-		$self->is_passing(0) unless $_[0] || $self->in_todo;
+		$self->failed_while_disengaged(1) unless $_[0] || $self->in_todo;
 		return $_[0] ? 1 : 0;
 	}
 	# the MOP modifier adds three stack frames
@@ -132,8 +135,28 @@ $meta->add_around_method_modifier('child', sub {
 });
 
 
-=head1 SUBROUTINES
+=head2   is_passing
 
+If the clutch is currently engaged, simply defers to the original method.
+If the clutch is disengaged, the test is considered to be passing only if
+the original method returns true, and we have also not failed any tests
+and any point while the clutch was disengaged.
+
+=cut
+
+$meta->add_around_method_modifier('is_passing', sub {
+	my $orig = shift;
+	my $self = shift;
+	if ($self->disengaged) {
+		return $self->$orig(@_) && !$self->failed_while_disengaged;
+	}
+	else {
+		return $self->$orig(@_);
+	}
+});
+
+
+=head1 SUBROUTINES
 
 =head2   engaged
 
