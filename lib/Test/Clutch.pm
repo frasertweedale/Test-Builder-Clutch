@@ -45,15 +45,9 @@ output.
 
 =cut
 
-use 5.006;
-use strict;
-use warnings;
-
 use Class::MOP;
 use Class::MOP::Class;
 use Test::Builder;
-
-our $VERSION = '0.01';
 
 my $meta = Class::MOP::Class->initialize('Test::Builder');
 
