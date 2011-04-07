@@ -1,6 +1,11 @@
 Build.PL
+Changes
 INSTALL
 lib/Test/Clutch.pm
-MANIFEST			This list of files
+MANIFEST
 README
-t/001-Test::Clutch.t
+t/00-load.t
+t/manifest.t
+t/pod-coverage.t
+t/pod.t
+t/Test::Clutch.t

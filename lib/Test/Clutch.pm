@@ -1,8 +1,19 @@
 package Test::Clutch;
 
+use warnings;
+use strict;
+
 =head1 NAME
 
 Test::Clutch - add a clutch to your testing drivechain
+
+=head1 VERSION
+
+Version 0.01
+
+=cut
+
+our $VERSION = '0.01';
 
 
 =head1 SYNOPSIS
@@ -196,7 +207,44 @@ sub engage { Test::Builder->new->engage }
 
 =head1 AUTHOR
 
-Fraser Tweedale E<lt>frasert@jumbolotteries.comE<gt>
+Fraser Tweedale, C<< <frasert at jumbolotteries.com> >>
+
+
+=head1 BUGS
+
+Please report any bugs or feature requests to C<bug-test-clutch at rt.cpan.org>, or through
+the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Test-Clutch>.  I will be notified, and then you'll
+automatically be notified of progress on your bug as I make changes.
+
+
+=SUPPORT
+
+You can find documentation for this module with the perldoc command.
+
+    perldoc Test::Clutch
+
+
+You can also look for information at:
+
+=over 4
+
+=item * RT: CPAN's request tracker
+
+L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Test-Clutch>
+
+=item * AnnoCPAN: Annotated CPAN documentation
+
+L<http://annocpan.org/dist/Test-Clutch>
+
+=item * CPAN Ratings
+
+L<http://cpanratings.perl.org/d/Test-Clutch>
+
+=item * Search CPAN
+
+L<http://search.cpan.org/dist/Test-Clutch/>
+
+=back
 
 
 =head1 SEE ALSO
@@ -204,17 +252,21 @@ Fraser Tweedale E<lt>frasert@jumbolotteries.comE<gt>
 L<Test::Builder> provides the test features that can be enabled/disabled
 courtesy of this module.
 
+L<Class::MOP> is the amazing meta-object protocol that makes all of this
+possible.
 
-=head1 COPYRIGHT and LICENSE
 
-Copyright (C) 2011 Jumbo Interactive
+=head1 LICENSE AND COPYRIGHT
+
+Copyright 2011 Benon Technologies Pty Ltd
 
 This program is free software; you can redistribute it and/or modify it
-under the terms of the Artistic License 2.0.
+under the terms of either: the GNU General Public License as published
+by the Free Software Foundation; or the Artistic License.
 
-See F<http://www.perlfoundation.org/artistic_license_2_0>
+See http://dev.perl.org/licenses/ for more information.
+
 
 =cut
 
-
-1;
+1; # End of Test::Clutch

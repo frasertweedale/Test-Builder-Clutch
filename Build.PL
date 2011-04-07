@@ -1,10 +1,17 @@
+use strict;
+use warnings;
 use Module::Build;
-Module::Build->new(
-	module_name => 'Test::Clutch',
-	license => 'artistic_2',
-	requires => {
-		'perl' => '5.006',
-		'Test::Builder' => '0.98',
-		'Class::MOP' => '1.04',
-	}
-)->create_build_script;
+
+my $builder = Module::Build->new(
+    module_name         => 'Test::Clutch',
+    license             => 'perl',
+    dist_author         => q{Fraser Tweedale <frase@frase.id.au>},
+    dist_version_from   => 'lib/Test/Clutch.pm',
+    build_requires => {
+        'Test::More' => 0,
+    },
+    add_to_cleanup      => [ 'Test-Clutch-*' ],
+    create_makefile_pl => 'traditional',
+);
+
+$builder->create_build_script();
