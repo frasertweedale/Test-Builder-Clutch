@@ -9,3 +9,5 @@ t/manifest.t
 t/pod-coverage.t
 t/pod.t
 t/Test::Clutch.t
+Makefile.PL
+META.yml
