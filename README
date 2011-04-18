@@ -1,14 +1,14 @@
-Test-Clutch
+Test-Builder-Clutch
 
-Test::Clutch modifies Test::Builder and provides the ability to suspend
-test output via a "clutch", which can be engaged or disengaged.  This
-might sound like a crazy thing to do, but there are some nifty uses.
+Test::Builder::Clutch modifies Test::Builder and provides the ability to
+suspend test output via a "clutch", which can be engaged or disengaged.
+This might sound like a crazy thing to do, but there are some nifty uses.
 
-For example, you could use Test::Clutch to metaprogram non-test versions
-of test methods, if what those test methods do is something generally
-useful.  A case of this might be a Test::WWW::Mechanize used to test a
-web site, but whose test methods might be employed in some other utility
-scripts.
+For example, you could use Test::Builder::Clutch to metaprogram non-test
+versions of test methods, if what those test methods do is something
+generally useful.  A case of this might be a Test::WWW::Mechanize used to
+test a web site, but whose test methods might be employed in some other
+utility scripts.
 
 INSTALLATION
 
@@ -24,21 +24,21 @@ SUPPORT AND DOCUMENTATION
 After installing, you can find documentation for this module with the
 perldoc command.
 
-    perldoc Test::Clutch
+    perldoc Test::Builder::Clutch
 
 You can also look for information at:
 
     RT, CPAN's request tracker
-        http://rt.cpan.org/NoAuth/Bugs.html?Dist=Test-Clutch
+        http://rt.cpan.org/NoAuth/Bugs.html?Dist=Test-Builder-Clutch
 
     AnnoCPAN, Annotated CPAN documentation
-        http://annocpan.org/dist/Test-Clutch
+        http://annocpan.org/dist/Test-Builder-Clutch
 
     CPAN Ratings
-        http://cpanratings.perl.org/d/Test-Clutch
+        http://cpanratings.perl.org/d/Test-Builder-Clutch
 
     Search CPAN
-        http://search.cpan.org/dist/Test-Clutch/
+        http://search.cpan.org/dist/Test-Builder-Clutch/
 
 
 LICENSE AND COPYRIGHT

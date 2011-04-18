@@ -3,14 +3,14 @@ use warnings;
 use Module::Build;
 
 my $builder = Module::Build->new(
-    module_name         => 'Test::Clutch',
+    module_name         => 'Test::Builder::Clutch',
     license             => 'perl',
     dist_author         => q{Fraser Tweedale <frase@frase.id.au>},
-    dist_version_from   => 'lib/Test/Clutch.pm',
+    dist_version_from   => 'lib/Test/Builder/Clutch.pm',
     build_requires => {
         'Test::More' => 0,
     },
-    add_to_cleanup      => [ 'Test-Clutch-*' ],
+    add_to_cleanup      => [ 'Test-Builder-Clutch-*' ],
     create_makefile_pl => 'traditional',
 );
 

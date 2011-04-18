@@ -11,11 +11,11 @@ license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
-name: Test-Clutch
+name: Test-Builder-Clutch
 provides:
-  Test::Clutch:
-    file: lib/Test/Clutch.pm
-    version: 0.01
+  Test::Builder::Clutch:
+    file: lib/Test/Builder/Clutch.pm
+    version: 0.02
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.01
+version: 0.02

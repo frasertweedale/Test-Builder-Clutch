@@ -2,13 +2,13 @@
 use ExtUtils::MakeMaker;
 WriteMakefile
 (
-  'PL_FILES' => {},
-  'INSTALLDIRS' => 'site',
-  'NAME' => 'Test::Clutch',
-  'EXE_FILES' => [],
-  'VERSION_FROM' => 'lib/Test/Clutch.pm',
+  'NAME' => 'Test::Builder::Clutch',
+  'VERSION_FROM' => 'lib/Test/Builder/Clutch.pm',
   'PREREQ_PM' => {
                    'Test::More' => 0
-                 }
+                 },
+  'INSTALLDIRS' => 'site',
+  'EXE_FILES' => [],
+  'PL_FILES' => {}
 )
 ;

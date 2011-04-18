@@ -47,4 +47,4 @@
 ^MANIFEST\.SKIP
 
 # Avoid archives of this distribution
-\bTest-Clutch-[\d\.\_]+
+\bTest-Builder-Clutch-[\d\.\_]+
