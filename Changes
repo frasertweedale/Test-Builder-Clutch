@@ -1,5 +1,8 @@
 Revision history for Test-Builder-Clutch
 
+0.03    20110513
+        Add prerequisites to Build.PL and Makefile.PL
+
 0.02    20110416
         Changed module name to Test::Builder::Clutch.
 
