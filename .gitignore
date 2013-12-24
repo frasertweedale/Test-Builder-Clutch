@@ -1,6 +1,7 @@
 *.bak
 _build/
 blib/
+MYMETA.json
 MYMETA.yml
 Build
 *.tar.gz
