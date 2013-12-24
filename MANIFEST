@@ -12,4 +12,4 @@ t/antitest.t
 t/manifest.t
 t/pod-coverage.t
 t/pod.t
-t/Test::Builder::Clutch.t
+t/Test-Builder-Clutch.t
