@@ -6,7 +6,7 @@ Makefile.PL
 MANIFEST
 META.json
 META.yml
-README
+README.pod
 t/00-load.t
 t/antitest.t
 t/manifest.t
