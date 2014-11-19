@@ -16,10 +16,10 @@ name: Test-Builder-Clutch
 provides:
   Test::Builder::Clutch:
     file: lib/Test/Builder/Clutch.pm
-    version: 0.06
+    version: 0.07
 requires:
   Class::MOP: 0
   Test::Builder: 0.98
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.06
+version: 0.07
